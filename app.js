@@ -11,6 +11,4 @@ app.use(express(json));
 
 app.use('/', require('./router'));
 
-app.listen(9999, ()=>{
-    console.log('SERVER corriendo en http://localhost:9999');
-})
+app.set('port', process.env.PORT||5000);
